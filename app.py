@@ -22,6 +22,7 @@ class NamedShape:
 
 
 app = Dash(__name__)
+server = app.server
 names = []
 f = open("inputs.json")
 data = json.load(f)
