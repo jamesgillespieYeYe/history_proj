@@ -20,13 +20,13 @@ class NamedShape:
         return json.dumps(self, default=lambda o: o.__dict__)
 
 
-if __name__ == "__main__":
-    app = Dash(__name__)
-    names = []
-    f = open("inputs.json")
-    data = json.load(f)
-    for i in data['functions']:
-        names.append(i['name'])
+
+app = Dash(__name__)
+names = []
+f = open("inputs.json")
+data = json.load(f)
+for i in data['functions']:
+    names.append(i['name'])
     
 
 def find_entry(name):
